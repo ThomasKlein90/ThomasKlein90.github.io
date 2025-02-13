@@ -2783,3 +2783,23 @@ button:active,
 	}
 
 }
+
+article ul.icons {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+}
+
+article ul.icons li {
+    display: inline-block; /* Align items horizontally */
+    margin-right: 10px; /* Space between icons */
+}
+
+article ul.icons a {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    text-decoration: none; /* Remove underline from text */
+}
+
+article ul.icons .text { /* This targets the text span specifically */
+    margin-left: 5px; /* Space between icon and text */
+}
