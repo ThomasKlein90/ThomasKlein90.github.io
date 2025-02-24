@@ -2785,21 +2785,54 @@ button:active,
 }
 
 articletext ul.icons {
-    list-style-type: none; /* Remove default list styling */
-    padding: 0;
+	list-style-type: none;
+	/* Remove default list styling */
+	padding: 0;
 }
 
 articletext ul.icons li {
-    display: inline-block; /* Align items horizontally */
-    margin-right: 10px; /* Space between icons */
+	display: inline-block;
+	/* Align items horizontally */
+	margin-right: 10px;
+	/* Space between icons */
 }
 
 articletext ul.icons a {
-    display: flex; /* Use flexbox for alignment */
-    align-items: center; /* Center items vertically */
-    text-decoration: none; /* Remove underline from text */
+	display: flex;
+	/* Use flexbox for alignment */
+	align-items: center;
+	/* Center items vertically */
+	text-decoration: none;
+	/* Remove underline from text */
 }
 
-articletext ul.icons .text { /* This targets the text span specifically */
-    margin-left: 5px; /* Space between icon and text */
+articletext ul.icons .text {
+	/* This targets the text span specifically */
+	margin-left: 5px;
+	/* Space between icon and text */
+}
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+.repository-link {
+	margin: 20px;
+}
+
+.repository-link a {
+	text-decoration: none;
+	color: #0366d6;
+	/* GitHub link color */
+	display: flex;
+	align-items: center;
+	/* Aligns text and image vertically */
+}
+
+.github-logo {
+	width: 20px;
+	/* Size of the GitHub logo */
+	height: 20px;
+	margin-right: 8px;
+	/* Space between the logo and the text */
 }
