@@ -161,37 +161,55 @@
                     <br>
 
                     <h4>Source of data: the BODYPUMP<sup>™</sup> choregraphy notes</h4>
-                    <p>I went looking for datasets on BODYPUMP<sup>™</sup> tracks, trying to obtain a neatly organized
-                        set of moves, repetitions (reps) and timings for as
-                        many tracks as possible but could not find any. I was going to have to create by own. As an
-                        instructor, you have to purchase your own music released
-                        and licensed by LesMills on a platform to be able to use it in your classes. The songs also come
-                        with choregraphy notes, teaching the instructors all
-                        they need to know about the sequnce, moves, timings (or tempos), number of repetitions and
-                        combinations (or combos). These documents generally follow
-                        the same format (though not always) meaning it would be possible to capture and extract data
-                        from them and store them in a tabular format.
-                    </p>
-                    <img src="images/Bodypump_choregraphy_notes.jpg" alt="description" />
+                    <div class="grid-container-2-1">
+                        <div class="grid-item-2-1">
+                            <p>I went looking for datasets on BODYPUMP<sup>™</sup> tracks, trying to obtain a neatly
+                                organized
+                                set of moves, repetitions (reps) and timings for as
+                                many tracks as possible but could not find any. I was going to have to create by own. As
+                                an
+                                instructor, you have to purchase your own music released
+                                and licensed by LesMills on a platform to be able to use it in your classes. The songs
+                                also come
+                                with choregraphy notes, teaching the instructors all
+                                they need to know about the sequnce, moves, timings (or tempos), number of repetitions
+                                and
+                                combinations (or combos). These documents generally follow
+                                the same format (though not always) meaning it would be possible to capture and extract
+                                data
+                                from them and store them in a tabular format.
+                            </p>
+                        </div>
+                        <div class="grid-item-2-1">
+                            <img src="images/Bodypump_choregraphy_notes.jpg" alt="description" height="200" />
+                        </div>
+                    </div>
+
                     <h6>Methods</h6>
                     <p>The first part of the <a href="https://github.com/ThomasKlein90/BodyPump/blob/main/bodypump_full.ipynb
-                        target="_blank">Jupyter Notebook</a> available on the GitHub repository linked above focuses on
+                        target=" _blank">Jupyter Notebook</a> available on the GitHub repository linked above focuses
+                        on
                         doing just that. Using 19 different choregraphy notes
-                        (from releases ranging from #94 to @127), I wrote functions reading the pdf documents page by
+                        (from releases ranging from #94 to @127), I wrote functions reading the pdf documents
+                        page by
                         page
                         and pulling out only the information about the
                         choregraphies (there are also notes and comments addressed to the instructors). More
                         specifically, I
                         set out to extract for each track:
                     <ul>
-                        <li>the metadata about the track: release number, track title, track number, muscle group, track
+                        <li>the metadata about the track: release number, track title, track number, muscle
+                            group, track
                             duration;</li>
-                        <li>for each move in the track: move description, number of repetitions, tempo, time index.</li>
+                        <li>for each move in the track: move description, number of repetitions, tempo, time
+                            index.</li>
                     </ul>
-                    As some of the files or tracks have specificities, I also had to take into account a lot of special
+                    As some of the files or tracks have specificities, I also had to take into account a lot of
+                    special
                     cases as well as ssometimes outright correct the data
                     that was captured by my code (hence the long block of manual modifications in my notebook).
-                    Additional work required calculating the number of repetitions when these were in combinations,
+                    Additional work required calculating the number of repetitions when these were in
+                    combinations,
                     and renaming the moves to a consistent, fixed list of possibilities to allow for comparison.
                     Finally, I arrived at a table like the one below.
                     </p>
@@ -202,22 +220,29 @@
                         interested to add some personal touches.
                         <br>
                         First, I added my own intensity ratings to be able to
-                        compare tracks having different moves. Taking the triceps tracks for example, the issue is how
-                        to compare a track that has mostly triceps extensions with a bar or a plate, with one that
-                        has mostly kickbacks or one that is a mix of triceps pushups and dips? It is just not possible.
+                        compare tracks having different moves. Taking the triceps tracks for example, the issue
+                        is how
+                        to compare a track that has mostly triceps extensions with a bar or a plate, with one
+                        that
+                        has mostly kickbacks or one that is a mix of triceps pushups and dips? It is just not
+                        possible.
                         Now, while the intensity ratings are obviously a personal perception and classification
                         of intensity, they do allow for such comparisons. On the repository, the file
                         <a href="https://github.com/ThomasKlein90/BodyPump/blob/main/move_intensity_assignment_v1.csv"
                             target="_blank">'move_intensity_assignment_v1.csv'</a> shows the values chosen
-                        between 0 (lowest intensity) to 100 (highest). For example a triceps dip with a 2/2 tempo has an
+                        between 0 (lowest intensity) to 100 (highest). For example a triceps dip with a 2/2
+                        tempo has an
                         intensity of 50, while a triceps pushup 1/1 gets a rating of 70 and a triceps press 4/4
                         gets just 25.
                         <br>
-                        Second, I keep track of the list of songs I teach in every class. I call such lists 'mixes' as I mix tracks from different release to create the 
-                        playlist for a certain class. Combining this with a system of track IDs, I am able to join such data with the data mentioned before to calculate 
+                        Second, I keep track of the list of songs I teach in every class. I call such lists
+                        'mixes' as I mix tracks from different release to create the
+                        playlist for a certain class. Combining this with a system of track IDs, I am able to
+                        join such data with the data mentioned before to calculate
                         intensity for my different mixes and compare them.
                         <br>
-                        Thrid, I usually wear (and remember to start...) a sports watch while teaching my classes. I was able to access my fitness data captured by Polar 
+                        Thrid, I usually wear (and remember to start...) a sports watch while teaching my
+                        classes. I was able to access my fitness data captured by Polar
                         and, using the dates, xxx
                     </p>
 
