@@ -181,7 +181,7 @@
                             </p>
                         </div>
                         <div class="grid-item-2-1">
-                            <img src="images/Bodypump_choregraphy_notes.jpg" alt="description" height="400" />
+                            <img src="images/Bodypump_choregraphy_notes.jpg" alt="description" height="370" />
                         </div>
                     </div>
 
@@ -213,7 +213,8 @@
                     and renaming the moves to a consistent, fixed list of possibilities to allow for comparison.
                     Finally, I arrived at a table like the one below.
                     </p>
-                    <img src="images/Bodypump_choregraphy_notes_translated_example.jpg" alt="description" />
+                    <img src="images/Bodypump_choregraphy_notes_translated_example.jpg" alt="description"
+                        height="150" />
 
                     <h4>Adding personal information</h4>
                     <p>While the data obtained above enables an objective comparison between tracks, I was also
@@ -241,14 +242,47 @@
                         join such data with the data mentioned before to calculate
                         intensity for my different mixes and compare them.
                         <br>
-                        Thrid, I usually wear (and remember to start...) a sports watch while teaching my
+                        Third, I usually wear (and remember to start...) a sports watch while teaching my
                         classes. I was able to access my fitness data captured by Polar
-                        and, using the dates, xxx
+                        and, using the workout dates of my different mixes on one side, and of the training sessions on
+                        the side, cross join fitness data
+                        measurements to the mixes data described above. Training load, maximum and average heart rate
+                        are therefore able to be used in
+                        conjunction with the repetitions and intensity data of the corresponding tracks and workout
+                        sessions calculated before.
                     </p>
-
-                    <h3>is this subtitle better? - h3</h3>
-                    <h4>is this subtitle better? - h4</h4>
-                    <h5>is this subtitle better? - h5</h5>
+                    >
+                    <h4>Results and dashboard presentation</h4>
+                    <p>After compiling the data and generating csv files to use as datasources, I was able to present
+                        the results of my findings as a Tableau dashboard.
+                        The dashboard is possible to <a href="https://public.tableau.com/app/profile/klein6166/viz/Bodypump-StrengthinNumbers/01a-Trackoverallcomparison
+                        target=" _blank">view on Tableau public</a>, or by <a href="https://github.com/ThomasKlein90/BodyPump/blob/main/Bodypump%20-%20Strength%20in%20Numbers.twbx
+                        target=" _blank">downloading the file</a> directly from the repository.
+                    </p>
+                    <h5>01- Track overall comparison</h5>
+                    <p>This first sheet (broken down in two for ease of read) compares tracks accross 4 different simple
+                        metrics, overall, and within each muscle group:
+                    <ul>
+                        <li>Track duration: just the longest and shortest tracks overall and per muscle group. Most tracks average 5 minutes but the longest one I 
+                            have access to is the 6:27 long back track from release #124 "Won't Make A Sound".
+                        </li>
+                        <li>Number of reps: the total count of reps (included, but indicated separately, pulses) in each track. It's not rare for a whole Bodypump workout to 
+                            total 1000 reps. The lunges track from release #117 "I Want It" is 216 reps, largely due to the high number of pulses (192), reps of lower range.
+                        </li>
+                        <li>Track speed: this metric is calculated by dividing the length of the track (in seconds) by the number of reps. This means that tracks with a high 
+                            track speed have a lot of reps comparatively to the length of the track. I found this metric interesting as some track may be have more reps than 
+                            others but eventually have the same number of reps or even lower, making them "less intense". For example, the biceps track of release #95 "GDFR" 
+                            is only 4:25. But it has 154 reps in that time, making it actually the "fastest" biceps track with 1.72 sec per rep (or 1 rep every 1.72 sec).
+                        </li>
+                        <li>
+                            Track intensity: this more complex metric sums the individual perceived intensity score I gave to each move for all the moves in one track and 
+                            divides the total by the song duration in seconds. That way, we get an estimation of the load of the track, while factoring its duration, making this 
+                            metric even more complete than the previous one. Actually, 4 of the 5 hardest tracks identified with the previous metrics are still showing up here, 
+                            but for example, because on average I find moves in shoulders tracks harder (and especially the ones in this track), the shoulders track from 
+                            release #98 "Tribes" surges to rank #4 of the hardest tracks overall. 
+                        </li>
+                    </ul>
+                    </p>
                     <h6>is this subtitle better? - h6</h6>
                     <p>some more text there as well</p>
 
