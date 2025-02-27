@@ -2840,7 +2840,7 @@ sub {
 	gap: 10px; /* Space between grid items */
 }
 .grid-item-1-2 {
-	padding: 0px; /* Adds padding inside each item */
+	padding: 1px; /* Adds padding inside each item */
 	border: 1px solid transparent; /* Adds a border */
 }
 
@@ -2850,6 +2850,6 @@ sub {
 	gap: 10px; /* Space between grid items */
 }
 .grid-item-2-1 {
-	padding: 0px; /* Adds padding inside each item */
+	padding: 1px; /* Adds padding inside each item */
 	border: 1px solid transparent; /* Adds a border */
 }
