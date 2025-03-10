@@ -77,7 +77,8 @@
                 </header>
 
                 <a href="https://public.tableau.com/app/profile/klein6166/viz/Bodypump-StrengthinNumbers/01a-Trackoverallcomparison"
-                    class="image featured"><img src="images/bodypump_strength_in_numbers_top.jpg" alt="" /></a>
+                    class="image featured"><img src="images/article_bodypump/bodypump_strength_in_numbers_top.jpg"
+                        alt="" /></a>
                 <sub>Click on the image above to access my dashboard on Tableau Public directly.</sub>
                 <br>
                 <sub>
@@ -181,7 +182,8 @@
                             </p>
                         </div>
                         <div class="grid-item-2-1">
-                            <img src="images/Bodypump_choregraphy_notes.jpg" alt="description" height="370" />
+                            <img src="images/article_bodypump/Bodypump_choregraphy_notes.jpg" alt="description"
+                                height="370" />
                         </div>
                     </div>
 
@@ -190,7 +192,7 @@
                         target=" _blank">Jupyter Notebook</a> available on the GitHub repository linked above focuses
                         on
                         doing just that. Using 19 different choregraphy notes
-                        (from releases ranging from #94 to @127), I wrote functions reading the pdf documents
+                        (from releases ranging from #94 to #127), I wrote functions reading the pdf documents
                         page by
                         page
                         and pulling out only the information about the
@@ -213,8 +215,8 @@
                     and renaming the moves to a consistent, fixed list of possibilities to allow for comparison.
                     Finally, I arrived at a table like the one below.
                     </p>
-                    <img src="images/Bodypump_choregraphy_notes_translated_example.jpg" alt="description"
-                        height="150" />
+                    <img src="images/article_bodypump/Bodypump_choregraphy_notes_translated_example.jpg"
+                        alt="description" height="150" />
 
                     <h4>Adding personal information</h4>
                     <p>While the data obtained above enables an objective comparison between tracks, I was also
@@ -251,7 +253,7 @@
                         conjunction with the repetitions and intensity data of the corresponding tracks and workout
                         sessions calculated before.
                     </p>
-                    >
+
                     <h4>Results and dashboard presentation</h4>
                     <p>After compiling the data and generating csv files to use as datasources, I was able to present
                         the results of my findings as a Tableau dashboard.
@@ -260,29 +262,160 @@
                         target=" _blank">downloading the file</a> directly from the repository.
                     </p>
                     <h5>01- Track overall comparison</h5>
-                    <p>This first sheet (broken down in two for ease of read) compares tracks accross 4 different simple
-                        metrics, overall, and within each muscle group:
+                    <div class="grid-container-2-1">
+                        <div class="grid-item-2-1">
+                            <p>This first sheet (broken down in two for ease of read) compares tracks accross 4
+                                different simple
+                                metrics, overall, and within each muscle group:
+                            <ul>
+                                <li>Track duration: just the longest and shortest tracks overall and per muscle group.
+                                    Most
+                                    tracks average 5 minutes but the longest one I
+                                    have access to is the 6:27 long back track from release #124 "Won't Make A Sound".
+                                </li>
+                                <li>Number of reps: the total count of reps (included, but indicated separately, pulses)
+                                    in each
+                                    track. It's not rare for a whole Bodypump workout to
+                                    total 1000 reps. The lunges track from release #117 "I Want It" is 216 reps, largely
+                                    due to
+                                    the high number of pulses (192), reps of lower range.
+                                </li>
+                                <li>Track speed: this metric is calculated by dividing the length of the track (in
+                                    seconds) by
+                                    the number of reps. This means that tracks with a high
+                                    track speed have a lot of reps comparatively to the length of the track. I found
+                                    this metric
+                                    interesting as some track may be have more reps than
+                                    others but eventually have the same number of reps or even lower, making them "less
+                                    intense". For example, the biceps track of release #95 "GDFR"
+                                    is only 4:25. But it has 154 reps in that time, making it actually the "fastest"
+                                    biceps
+                                    track with 1.72 sec per rep (or 1 rep every 1.72 sec).
+                                </li>
+                                <li>
+                                    Track intensity: this more complex metric sums the individual perceived intensity
+                                    score I
+                                    gave to each move for all the moves in one track and
+                                    divides the total by the song duration in seconds. That way, we get an estimation of
+                                    the
+                                    load of the track, while factoring its duration, making this
+                                    metric even more complete than the previous one. Actually, 4 of the 5 hardest tracks
+                                    identified with the previous metrics are still showing up here,
+                                    but for example, because on average I find moves in shoulders tracks harder (and
+                                    especially
+                                    the ones in this track), the shoulders track from
+                                    release #98 "Tribes" surges to rank #4 of the hardest tracks overall.
+                                </li>
+                            </ul>
+                            </p>
+                        </div>
+                        <div class="grid-item-2-1">
+                            <img src="images/article_bodypump/bodypump_track_overall_comparison.jpg" alt="description"
+                                height="370" />
+                        </div>
+                    </div>
+
+                    <h5>02- Track metrics analysis</h5>
+                    <p>
+                        This second sheet lets the user compare tracks, either by track type or by release, according to
+                        the metrics described before. By default, the metric chosen is the track intensity per second,
+                        but others can be selected.
                     <ul>
-                        <li>Track duration: just the longest and shortest tracks overall and per muscle group. Most tracks average 5 minutes but the longest one I 
-                            have access to is the 6:27 long back track from release #124 "Won't Make A Sound".
+                        <li>Per Track Type: based on this metric, we can see than Lunges and triceps have the highest
+                            intensity. Most Bodypump instructors or
+                            members would confirm that! The top right scatter plot shows that Chest and Lunges tracks
+                            have actually the highest number of reps,
+                            though lunges track being usually a bit shorter, it makes them more intense.
                         </li>
-                        <li>Number of reps: the total count of reps (included, but indicated separately, pulses) in each track. It's not rare for a whole Bodypump workout to 
-                            total 1000 reps. The lunges track from release #117 "I Want It" is 216 reps, largely due to the high number of pulses (192), reps of lower range.
+                        <li>Per BodyPump release: the comparison of the average for this metric is more difficult, but
+                            overall it sometimes feel like most tracks
+                            from specific release felt harder. Bodypump #96, #117 and #118 seem to be in that case. On
+                            the right we can see that Bodypump #116, the
+                            one I have actually passed my certification on and I consider as one of the "easiest", has
+                            tracks generally shorter and with fewer reps.
                         </li>
-                        <li>Track speed: this metric is calculated by dividing the length of the track (in seconds) by the number of reps. This means that tracks with a high 
-                            track speed have a lot of reps comparatively to the length of the track. I found this metric interesting as some track may be have more reps than 
-                            others but eventually have the same number of reps or even lower, making them "less intense". For example, the biceps track of release #95 "GDFR" 
-                            is only 4:25. But it has 154 reps in that time, making it actually the "fastest" biceps track with 1.72 sec per rep (or 1 rep every 1.72 sec).
-                        </li>
-                        <li>
-                            Track intensity: this more complex metric sums the individual perceived intensity score I gave to each move for all the moves in one track and 
-                            divides the total by the song duration in seconds. That way, we get an estimation of the load of the track, while factoring its duration, making this 
-                            metric even more complete than the previous one. Actually, 4 of the 5 hardest tracks identified with the previous metrics are still showing up here, 
-                            but for example, because on average I find moves in shoulders tracks harder (and especially the ones in this track), the shoulders track from 
-                            release #98 "Tribes" surges to rank #4 of the hardest tracks overall. 
+                        <li>All tracks: the bottom two scatterplots are showing all the tracks in the dataset and are
+                            therefore better used by mousing over some of
+                            the outlier data points. I also wanted to confront my own perception of the difficulty
+                            (rating out of 10) to the actually calculated
+                            intensity as described before. The correlation is not obvious but there is a slight positive
+                            correlation.
                         </li>
                     </ul>
                     </p>
+                    <img src="images/article_bodypump/bodypump_track_metrics_analysis.jpg" alt="description"
+                        height="150" />
+                    <h5>03- Moves analysis</h5>
+                    <p>
+                        This third sheet goes down to the actual moves breakdown. Over all the releases, the BodyPump
+                        choregraphies include many variations of the
+                        same "move". A standing triceps extension is not exactly the same as a sitting one, a wide
+                        pushup engages chest muscles a bit differently
+                        compared to a mid-grip one. However, for the sake of comparison, I've combined and grouped some
+                        of the moves under a fixed list of
+                        move types.
+                    <ul>
+                        <li>Overall: this chart shows the top 10 most popular move types. Unsurprisingly, these are the
+                            usual suspects: squats, chest presses, pushups,
+                            lunges, deadrows... These moves are colored on the rest of the page, meaning that the
+                            non-colored ones (in grey) are moves outside of this
+                            "top 10".
+                        </li>
+                        <li>Per track type: the goal of this selectable histogram is to show on average, how many reps
+                            of each move types are done. We can see for example that
+                            the most popular move in the triceps track is the triceps overhead extension (~39 reps in a
+                            track), with triceps kickback and triceps press close
+                            behind. Chest tracks mostly consist in chest presses and pushups and biceps tracks of biceps
+                            curls. Shoulders tracks are more diverse in moves,
+                            sometimes including strict presses, sometimes involving pushups and upright rows, sometimes
+                            using side raises.
+                        </li>
+                        <li>Per BodyPump release: here I was interested in showing the distribution of these popular
+                            moves per release. If we look at release #108 (see below),
+                            we see that while the Squat and Lunges tracks are very "conventional" with mostly just
+                            squats and lunges, the triceps track is more "original" than
+                            the average one, using triceps pushups and triceps kickbacks for two thirds of the reps. The
+                            shoulders track also involves deltoid fly for half of it.
+                        </li>
+                    </ul>
+                    </p>
+                    <img src="images/article_bodypump/bodypump_moves_analysis.jpg" alt="description" height="150" />
+
+
+                    <h5>04- Make your own mix</h5>
+                    <p>
+                        In this sheet I wanted to showcase my dashboard building skills by bringing some interaction
+                        with the user. If you are an instructor and you want
+                        to use it to build your own mix of tracks for your next class, he is how I intended it:
+                    <ol>
+                        <li>Select the metric you want to focus on for the track selection. Maybe you want to maximize
+                            (or minimize) intensity. Or the number of reps.
+                            Select this at the top.</li>
+                        <li>For each track type, a bar chart displays the list of available tracks, ordered by the
+                            metric you selected. You can select a track for each track type,
+                            using the drop downs and it will highlight it in orange.</li>
+                        <li>Once you've selected all your tracks, an indicator on the right confirms it and shows for
+                            how many of them the data about the reps is available.</li>
+                        <li>The next multiple bar chart gives an overview of the tracks selected, with 3 different
+                            metrics for each track. You can select and change the metrics displayed.</li>
+                            <li>Finally, the last part shows the brekdown of the moves, both per track and the overall total.</li>
+                    </ol>
+                    </p>
+                    
+                    <h5>05- My mixes analysis</h5>
+                    <p>This last worksheet brings in the fitness data measured by my Polar watch like I mentioned it before. I'm focusing here on a metric called "Cardio Load"
+                        which is an aggregated score calculated by Polar for each workout session (based on duration, average and max heart rate, and time spent in the 5
+                        different cardio zones). I wanted to see if there is a correlation between higher cardio loads and the metrics discussed before to "objectivize" 
+                        the difficulty of the songs and mixes. I am comparing the cardio load (y-axis) to my own perceived subjective difficulty rating (out of 10, first x-axis),
+                         the average intensity per second per song (second x-axis) and the average number of reps per track (third x-axis). The scatter plots do not really 
+                         show any obvious correlation though a faint upward trend can be observed. But for example, the "hardest" training session, on 2024/07/20, only scores a 5.0
+                         on my subjective difficulty ranking and is also on the lower end for the intensity metric. In the upper half of intense workouts, the one with most reps
+                         had a total of over 1000 reps! 
+                         <br>These observations obviously need to be tempered by the fact many other factors can influence the heart rate and cardio load measured. The watch 
+                         itself, not as accurate as other devices, the form of the day, how much sleep I had the night before, the weight on the bar... Consider this more as a 
+                         thought exercise than a real consluive analysis!
+                    </p>
+                    <img src="images/article_bodypump/bodypump_strength_in_numbers_my_mixes_analysis.jpg" alt="description" height="150" />
                     <h6>is this subtitle better? - h6</h6>
                     <p>some more text there as well</p>
 
