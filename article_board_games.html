@@ -1,0 +1,225 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+
+<head>
+    <title>Strength In Numbers - LesMills BODYPUMP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+
+    <!-- Header -->
+    <div id="header">
+
+        <div class="top">
+
+            <!-- Logo -->
+            <div id="logo">
+                <span class="image avatar48"><img src="images/Klein Thomas.jpg" alt="" /></span>
+                <h1 id="title">Thomas Klein</h1>
+                <p>Business Intelligence Engineer</p>
+            </div>
+
+            <!-- Nav -->
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
+                    <li><a href="index.html#portfolio" id="portfolio-link"><span
+                                class="icon solid fa-th">Portfolio</span></a>
+                    </li>
+                    <li><a href="index.html#about" id="about-link"><span class="icon solid fa-user">About Me</span></a>
+                    </li>
+                    <li><a href="index.html#contact" id="contact-link"><span
+                                class="icon solid fa-envelope">Contact</span></a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <div class="bottom">
+
+            <!-- Social Icons -->
+            <ul class="icons">
+                <li><a href="https://public.tableau.com/app/profile/klein6166/vizzes"
+                        class="icon brands fa-salesforce"><span class="label">Tableau</span></a></li>
+                <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="https://github.com/ThomasKlein90" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                <li><a href="https://www.linkedin.com/in/thomas-klein-3831b297/" class="icon brands fa-linkedin"><span
+                            class="label">LinkedIn</span></a></li>
+                <li><a href="mailto:thomask.klein@laposte.net" class="icon solid fa-envelope"><span
+                            class="label">Email</span></a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <!-- Main -->
+    <div id="main">
+        <!-- About Me -->
+        <section id="about" class="three">
+            <div class="container">
+
+                <header>
+                    <h2>Building a recommender system for my board games hobbyt</h2>
+                    <nav>
+                        <a href="index.html">Home</a>
+                    </nav>
+                </header>
+
+                <sub>
+                    <a href="https://github.com/ThomasKlein90/boardgames" target="_blank">
+                        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                            alt="GitHub Logo" class="github-logo">Click here to access the related GitHub repository</a>
+                </sub>
+                <br>
+                <br>
+                <div class="articletext">
+                    <h4>Introduction</h4>
+                    <p>The board gaming hobby is incredibly rich. Thousands of games, a myriad of styles and mechanics,
+                        very different levels of complexity, incredibly creative ideas, designs and themes from their
+                        creators... The board gaming community is also very active and united, always looking to give
+                        feedback on recently-published games, create content, guides and reviews to help other players
+                        enjoy the games or join the hobby and giving time and energy to manage resources to document,
+                        support or even develop online versions of the games. I was always a board game fan, from
+                        weekend afternoons to playing with family, Wednesdays at my grandmother's playing with her and
+                        my cousins or later on, more social games with friends in high school and university. I got
+                        introduced more recently to the "serious" part of the hobby, where the games are more complex,
+                        last longer (a few hours) and require proper brain investment. Although no two games are the
+                        same and there are so many different ingenious mechanics designed by the authors to create a
+                        engaging experience, it seemed to me there would be some traits and aspects of games that I
+                        appreciate more than others and that would motivate me to play another game or try a new one.
+                    </p>
+                    <blockquote>Although no two games are the
+                        same and there are so many different ingenious mechanics, it seemed to me there would be some
+                        traits and aspects of games that I
+                        appreciate more than others.</blockquote>
+
+                    <h4>Project</h4>
+                    <p>After spending time on the number one board games website BoardGameGeek and its vast resources to
+                        look at list of games, compare games I had already played, browse through others... I decided I
+                        would try to see if I can find the similarities that make it so I enjoy the games I enjoy and
+                        potentially find new games I should try based on some of those "similarities". The idea is to
+                        develop a machine learning model using data describing aspects of board games (theme, category,
+                        complexity, mechanics, desginers, etc.), feed my own subjective reviews of the games I've played
+                        (both liked and disliked) on a scale of 1 to 10, and then train, test and refine a
+                        recommendation model for myself. The challenges are to determine what are the actual features we
+                        are going to use, what kind of model and how well it would perform given the fact that the
+                        target variable would be my own subjective rating and also that I have only played and reviewed
+                        an admittedly small proportion of the whole board games catalogue.
+                    </p>
+
+                    <h4>Results</h4>
+                    <h5>Outcome - Most recommended games</h5>
+                    <p>We can see that several of the top recommended games are actual games I have played and highly
+                        rates, such as Mysterium, Dune: Imperium or Root. But many of those top recommendations are also
+                        games I don't know, and some I have heard of that I could be interested in.</p>
+                    <img src="images/article_board_games/board_games_most_recommended.jpg" alt="description"
+                        height="250" />
+
+                    <h5>Relative feature importance</h5>
+                    <p>Plotting the relative feature importance chart displays the main features used in training and
+                        shows that the ones that seem to impact my rating are the fact it is a Children's game or not,
+                        having a preference for those that are not, since indeed I do prefer adult games. Surprisingly,
+                        horror, fighting and role playing seem to have an positive influence on the rating given by the
+                        model while I don't think I particularly give any attention to these. Finally, the "Tracks"
+                        trait does feature as one of the top 10 most impactful and positive features which is indeed one
+                        the traits I do enjoy the most about games.
+                    </p>
+                    <img src="images/article_board_games/board_games_relative_feature_importance.jpg" alt="description"
+                        height="250" />
+                    <blockquote>The project goal is about capturing and trying to objectify as much as possible
+                        differences in levels of difficulty between releases.</blockquote>
+                    <br>
+
+                    <h5>SHAP analysis of some specific results</h5>
+                    <p>Plotting the SHAP analysis graphs helps to understand why certain games get such or such rating
+                        and what impacts the most the final rating.
+                    <ul>
+                        <li>A board game I know I don't like: <b>UNO</b></li>
+                    </ul>
+                    <img src="images/article_board_games/board_games_UNO.jpg" alt="description" height="200" />
+                    Being a low complexity game that is classified as "Children's game" very negatively impacts the
+                    rating UNO gets. Furthermore, one of the only positive traits increasing the rating is "Deck, Pool,
+                    Bag Building", which was most likely mis-assigned due to the game having a deck of cards as it not
+                    really a deck building game, should mean that the rating would be even lower for that game.
+
+                    <ul>
+                        <li>A 'good' known board game for me: <b>Ark Nova</b></li>
+                    </ul>
+                    <img src="images/article_board_games/board_games_ArkNova.jpg" alt="description" height="200" />
+                    A high complexity game, with a theme that I like (Animals) and some tile placement mean that Ark
+                    Nova gets a high rating. We have to temper the rating as the 'Deck buidling' trait is not the main
+                    feature of the game.
+
+                    <ul>
+                        <li>A recommended popular game unknown to me: <b>Lisboa</b></li>
+                    </ul>
+                    <img src="images/article_board_games/board_games_Lisboa.jpg" alt="description" height="200" />
+                    Again, a complex game with deck building and tile placement, means I should like this game. Very few
+                    traits are negatively impacting the result, one of them being Territory Building, which is indeed,
+                    not my favourite mechanic.
+
+                    <h4>Conclusion</h4>
+                    <p>This project has been a tentative at a recommender system to give myself some recommendations of
+                        games I would enjoy based on traits such as game complexity, mechanics and categories. The main
+                        obstacle to a reliable prediction and model building is that the target metric, my own rating,
+                        is subjective and some games having a certain theme or mechanic could be rated high in some
+                        cases and low in others because of other factors, some of them where discarded in this project
+                        due to complexity of analysis or incomplete data (e.g. designer, artist, publisher...). External
+                        factors, such as mood, people I played with, how I overall did at the game (playing well or
+                        badly) could have an impact on my subjective rating but obviously cannot be captured my the
+                        moddel. Finally, the small sample size of game with the target feature present (~110 games)
+                        compared to the overall list of games (~90k) means the data used for training of this
+                        unsupervised model is likely to cause underfitting when training (and testing) the model.
+                    </p>
+
+                    <blockquote>The main
+                        obstacle to a reliable prediction and model building is that the target metric, my own rating,
+                        is subjective.</blockquote>
+
+                    <h6>Edit</h6>
+                    <p>Since I first worked on this project (in mid 2024), I have learned new skills and methodologies
+                        to apply to building models such as this one. I have also played
+                        more games since then so I have more data to use to build my recommender system. This warrants
+                        an update in the coming months...
+                    </p>
+
+                </div>
+            </div>
+    </div>
+    </section>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer">
+
+        <!-- Copyright -->
+        <ul class="copyright">
+            <li>&copy; Thomas KLEIN. All rights reserved.</li>
+            <li>Design: <a href="http://html5up.net">HTML5 UP - Prologue</a></li>
+        </ul>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
