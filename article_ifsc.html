@@ -1,0 +1,310 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+
+<head>
+    <title>Strength In Numbers - LesMills BODYPUMP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+
+    <!-- Header -->
+    <div id="header">
+
+        <div class="top">
+
+            <!-- Logo -->
+            <div id="logo">
+                <span class="image avatar48"><img src="images/Klein Thomas.jpg" alt="" /></span>
+                <h1 id="title">Thomas Klein</h1>
+                <p>Business Intelligence Engineer</p>
+            </div>
+
+            <!-- Nav -->
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
+                    <li><a href="index.html#portfolio" id="portfolio-link"><span
+                                class="icon solid fa-th">Portfolio</span></a>
+                    </li>
+                    <li><a href="index.html#about" id="about-link"><span class="icon solid fa-user">About Me</span></a>
+                    </li>
+                    <li><a href="index.html#contact" id="contact-link"><span
+                                class="icon solid fa-envelope">Contact</span></a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <div class="bottom">
+
+            <!-- Social Icons -->
+            <ul class="icons">
+                <li><a href="https://public.tableau.com/app/profile/klein6166/vizzes"
+                        class="icon brands fa-salesforce"><span class="label">Tableau</span></a></li>
+                <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="https://github.com/ThomasKlein90" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                <li><a href="https://www.linkedin.com/in/thomas-klein-3831b297/" class="icon brands fa-linkedin"><span
+                            class="label">LinkedIn</span></a></li>
+                <li><a href="mailto:thomask.klein@laposte.net" class="icon solid fa-envelope"><span
+                            class="label">Email</span></a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <!-- Main -->
+    <div id="main">
+        <!-- About Me -->
+        <section id="about" class="three">
+            <div class="container">
+
+                <header>
+                    <h2>IFSC Climbing competitions - 2020 and 2024 Olympics review and predictions</h2>
+                    <nav>
+                        <a href="index.html">Home</a>
+                    </nav>
+                </header>
+
+                <sub>
+                    <a href="https://github.com/ThomasKlein90/IFSC" target="_blank">
+                        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                            alt="GitHub Logo" class="github-logo">Click here to access the related GitHub repository</a>
+                </sub>
+                <br>
+                <br>
+                <div class="articletext">
+                    <h4>Introduction</h4>
+                    <p>Another one of my hobby is climbing. Indoor or outdoor, bouldering or sport climbing (with a
+                        rope), I fell in love with the sport in 2020. The fact that
+                        it combines physicality and balance with mental qualities such as determination and figuring out
+                        a problem (not to mention creativity) makes it a
+                        very complete and a very exciting discipline. So it is not really surprising that I also got
+                        into professional climbing competitions, which got a
+                        relatively increased hype and popularity over the past few years, especially since its
+                        introduction in the 2020 Tokyo Olympics and due to the rise
+                        of "superstar" Janja Garnbret. But climbing is a difficult sport to judge and rank due to its
+                        "all-or-nothing" nature (after all, either you reach the
+                        top or you don't). It is also one of those sports where athletes are competing versus each other
+                        to a certain extent, but mostly against the walls
+                        and the people who design the bouldering problems and lead climbing routes (called
+                        route-setters). This post dives into the topic of professional
+                        climbing competions and scoring.
+                    </p>
+                    <blockquote>Climbing is a difficult sport to judge and rank due to its "all-or-nothing" nature
+                        (after all, either you reach the
+                        top or you don't).</blockquote>
+                    <br>
+                    <h4>Project</h4>
+                    <p>I set out for two main objectives with this project and the exploration of climbing competitions
+                        results. The complete Jupyter Notebook can be
+                        accessed <a href=https://github.com/ThomasKlein90/IFSC/blob/main/IFSC.ipynb
+                            target="_blank">here</a>.
+                    <ul>
+                        <li>In anticipation for the 2024 Paris Olympics and its climbing event, I wanted to use a
+                            "ranker" model to see if I could predict the results
+                            based on historical results at various competitions on the circuit.
+                        </li>
+                        <li>As the scoring rules have evoled between the 2020 Tokyo Olympics and the 2024 Paris one, I
+                            wanted to recalculate what the results
+                            could have been at that competition if the new rules had been applied back then.
+                        </li>
+                    </ul>
+                    </p>
+
+                    <h4>1. Predicting Paris 2024</h4>
+                    <p>IFSC, the international federation of sport climbing, has a continuous circuit of competitions
+                        throughout the year, similar to ATP and WTA for tennis.
+                        At each of these events in many different locations, climbers compete through a
+                        qualifications/semi-finals/finals format. After gathering the results
+                        of major and minor climbing competitions since the Tokyo Olympics in 2021 to the start of 2024,
+                        I set out to use a ranker model (XGBRanker) to focus on prediciting the order of the contestants
+                        at a future competition. The methodology
+                        only relies on comparing pairwise the most common order in which contestants finished to predict
+                        what is the most likely order when presented with a
+                        set of entries. I submitted on 9 of the most popular (and likely) contestants to have a shot at
+                        the win in Paris and obtained the predicted ranking below.</p>
+                    <img src="images/article_ifsc/ifsc_predicted_paris.jpg" alt="description" height="250" />
+                    <br><b>Edit:</b> when I originally did this analysis, the 2024 hadn't happened yet. Now the results
+                    are here and obviously my model not predicting Janja
+                    Garnbret to win was always going to be wrong. Brooke Raboutou did finish second, and Jessica Pilz
+                    third similar to the model's prediction. Miho Nonaka and
+                    Natalia Grossman actually failed to qualify for the final, while Ai Mori finished 4th and Chaehyun
+                    Seo 6th. "Surprised" Erin McNeice and Oceana
+                    McKenziw finished 5th and 7th while Oriane Bertone, predicted first my the model, crumbled under the
+                    pressure in the finals and finished in 8th.
+
+                    <h4>2. Revisiting the past: what Tokyo 2020 could have been</h4>
+                    <h5>Background</h5>
+                    <p>In its first introduction to the Olympics in 2020, climbing took the form of a triple event.
+                        Speed climbing, bouldering and lead climbing formed part
+                        of a single classification to determine medal, with the rankings at each one of the three events
+                        simply being multiplied together to give the final
+                        order. This came with a lot of criticism from fans (and athletes), mostly because speed climbing
+                        relies on completely different qualities compared to
+                        the other two events. The total ranking method was also questionable as someone doing vastly
+                        better at say, bouldering, but slightly inferior at
+                        speed would be penalized.
+                        <br>For the 2024 edition, speed climbing was separated from the other two and given its own
+                        event and medals. We will not focus on it for this
+                        analysis. Bouldering and Lead remained combined, with event having a possible maximum 100 points
+                        to score, then both scored tallied up to give the
+                        final ranking. Now I will go slightly more into details about the calculation of these scores as
+                        it was the whole point of this study.
+
+                    <h6>Bouldering scoring</h6>
+                    The bouldering event at the 2024 Olympics was scored as follows: 4 boulder "problems", each one
+                    awarding a maximum of 25 points for completing it
+                    (for a maximum total of 100 points). Not reaching the top but reaching intermediate "zones" is also
+                    rewarded, with the lower zone awardin 5 points, and the higher one 10.
+                    Finally, each subsequent tentative and restart (in the imparted time) deducts 0.1 points (mostly to
+                    separate ex aequo).
+                    <br>Back in Tokto 2020, the was no point system since all that mattered was the ranking. Athletes
+                    were separated first my the number of tops (finishing the problem), then
+                    the number of zones (there was just one intermediate zone, halfway through each problem), and
+                    finally the number of attempts. The score would look something like
+                    "2T3z 5 3" which mean 2 tops, 3 zones, 5 top attempts, 3 zone attempts (over 3 boulders).
+                    <br>It is difficult to compare the score between 2020 and 2024 but I've chosen the following
+                    assumptions:
+                    <ul>
+                        <li>to transpose the scores to a scale of 0-100, each boulder will be worth 25 points (for the
+                            qualifications, 4 problems) or 33 points (for the
+                            finals, 3 problems)
+                        </li>
+                        <li>there was only one zone in Tokyo, for which I decided to award 40% of the points (so 10 in
+                            the qualifications, 13 in the finals).
+                            A value of 30% would also make sense</li>
+                        <li>like the current rule, 0.1 points would be deducted by attempt</li>
+                    </ul>
+
+                    <h6>Lead climbing scoring</h6>
+                    The lead event is slightly more straightforward to score. There is only one route and one attempt to
+                    climb it, the first fall being definitive and we
+                    then take the highest point the climber reached as their final score. The scoring method now (and in
+                    Paris 2024) consists in awarding a total of 100 points
+                    as well, spread out over the top 40 holds a climber has to use to reach the top. The last 10 holds
+                    award 4 points each, the 10 before that 3 each, etc.
+                    <br>Again, in Tokyo, athletes were only compared and ranked based on how high they got. We know the
+                    number of moves they completed so we can apply the same
+                    scale, calculating the number of moves to reach the top, and then giving 4 points for each of the
+                    holds used in the 10 below that, then 3, then 2, then 1.
+
+                    <h5>Results and comparison</h5>
+                    After applying those calculations to re-estimate the score the athletes would have gotten in Tokyo
+                    if the assu and methods described above had been applied,
+                    we can compare their final score and position to the one they actually got. Note that we are
+                    discarding the speed climbing event in our adjusted calculation
+                    as we want to just estimate the rank they would have obtained if it had just been a separate Boulder
+                    & Lead competition, like in Paris 2024.
+                    </p>
+                    <div class="grid-container-2-1">
+                        <div class="grid-item-2-1">
+                            <p>The qualifications, in which the athletes need to place in the top 8 to proceed, would
+                                have been quite impacted. For men, Bassa Mawem,
+                                a speed specialist qualified in 7th while if only boulder and lead had mattered he would
+                                have been last... Alex Megos, a German climber,
+                                could have had a shot at a medal but in Tokyo setting, only placed 9th in
+                                qualifications. Finally, Gines Lopez, future gold medalist,
+                                would have barely made the cut to the finals if only Boulder and Lead counted.
+                            </p>
+                        </div>
+                        <div class="grid-item-2-1">
+                            <img src="images/article_IFSC/Tokyo Olympics 2020 - Climbing - Qualifications - Men.jpg"
+                                alt="description" height="370" />
+                        </div>
+                    </div>
+                    <div class="grid-container-2-1">
+                        <div class="grid-item-2-1">
+                            <p>For women, the observations are similar. Miroslaw and Jaubert, 7th and 8th in the
+                                qualifications, greatly owe their ticket for the finals to
+                                their speed performance. Shauna Coxsey, a famous, veteran climber form the UK, narrowly
+                                missed on the finals but would have made it if it
+                                was just Boulder & Lead. The more balanced (and generally stronger) climbers that are
+                                Janja Garnbret, Chaehyun Seo, Miho Nonaka, Jessica Pilz
+                                or Brooke Raboutou would all have made the finals either way though.
+                            </p>
+                        </div>
+                        <div class="grid-item-2-1">
+                            <img src="images/article_IFSC/Tokyo Olympics 2020 - Climbing - Qualifications - Women.jpg"
+                                alt="description" height="370" />
+                        </div>
+                    </div>
+                    <div class="grid-container-2-1">
+                        <div class="grid-item-2-1">
+                            <p>In the men finals, Alberto Gines Lopez eventually obtained the gold medal, largely due to
+                                his strong performance on the speed and lead events.
+                                But his poorer performance in bouldering would have meant he would have only finished
+                                5th with Paris 2024 rules. Austrian Jakob Schubert would
+                                have upgraded his bronze medal for the gold one, while crowd favorite Adam Ondra could
+                                have clinched 3rd instead of his 6th place.
+                            </p>
+                        </div>
+                        <div class="grid-item-2-1">
+                            <img src="images/article_IFSC/Tokyo Olympics 2020 - Climbing - Finals - Men.jpg"
+                                alt="description" height="250" />
+                        </div>
+                    </div>
+                    <div class="grid-container-2-1">
+                        <div class="grid-item-2-1">
+                            <p>Finally, for the women finals, nothing would have changed the complete domination of
+                                Janja Garnbret. But the podium would have looked very
+                                different with Pilz and Seo finishing 2nd and 3rd instead of 7th and 8th if their poor
+                                speed climbing performance didn't matter.
+                            </p>
+                        </div>
+                        <div class="grid-item-2-1">
+                            <img src="images/article_IFSC/Tokyo Olympics 2020 - Climbing - Finals - Women.jpg"
+                                alt="description" height="250" />
+                        </div>
+                    </div>
+
+                    <h4>Conclusion</h4>
+                    <p>There are a few obvious flaws with an analysis like this one. First, the rules were what they
+                        were in Tokyo and it meant that all climbers trained
+                        for all 3 events, not just two. Still, most people agree that the qualities needed for Boulder
+                        and Lead are closer and make more sense to group together
+                        these events than the Speed one. The point system and the two zones were also not in place in
+                        Tokyo, making the calculations and projections I made
+                        highly contestable. Finally, the words I used on the charts above such as "robbed" are just
+                        there to attract attention to the results of the comparison,
+                        I do not mean that anyone did not deserve their final ranking in Tokyo!
+                    </p>
+                </div>
+            </div>
+    </div>
+    </section>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer">
+
+        <!-- Copyright -->
+        <ul class="copyright">
+            <li>&copy; Thomas KLEIN. All rights reserved.</li>
+            <li>Design: <a href="http://html5up.net">HTML5 UP - Prologue</a></li>
+        </ul>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
