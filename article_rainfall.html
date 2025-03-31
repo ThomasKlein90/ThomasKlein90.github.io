@@ -7,7 +7,7 @@
 <html lang="en">
 
 <head>
-    <title>Strength In Numbers - LesMills BODYPUMP</title>
+    <title>Kaggle Playground Competition - Rainfall Prediction</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -77,7 +77,7 @@
                 </header>
 
                 <sub>
-                    <a href="https://github.com/ThomasKlein90/IFSC" target="_blank">
+                    <a href="https://github.com/ThomasKlein90/rainfall" target="_blank">
                         <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
                             alt="GitHub Logo" class="github-logo">Click here to access the related GitHub repository</a>
                 </sub>
@@ -104,6 +104,7 @@
                         split between a 'train' (with the target metric) and a 'test' (without the target metric).The
                         data consists of calendar and meteorological data. There is no extra information about what they
                         mean exactly. Here are the 13 fields, with my best guess as to what they represent:
+                        <br>
                         <img src="images/article_rainfall/rainfall_1_data.jpg" alt="description" height="250" />
                     </p>
 
@@ -185,7 +186,7 @@
                         </li>
                     </ul>
                     </p>
-                    <img src="images/article_rainfall/rainfall_3_temp.jpg" alt="description" height="120" />
+                    <img src="images/article_rainfall/rainfall_3_temp.jpg" alt="description" height="200" />
                     <p>Humidity, pressure and cloud coverage:
                     <ul>
                         <li>The 'pressure' histogram above shows that the data is generally normally distributed. There
@@ -200,17 +201,17 @@
                     </ul>
                     Let's check if cloud coverage and humidity look to be correlated.
                     </p>
-                    <img src="images/article_rainfall/rainfall_4_humidity.jpg" alt="description" height="120" />
+                    <img src="images/article_rainfall/rainfall_4_humidity.jpg" alt="description" height="200" />
                     <p>As shown on the scatterplot above, the correlation between cloud coverage and humidity is not
                         strong but it is present, with higher values of humidity concurring with higher values of cloud
                         coverage. As discussed before such higher value also seem to correlate with increased chance of
                         rainfall.</p>
-                    <img src="images/article_rainfall/rainfall_5_cloud.jpg" alt="description" height="120" />
+                    <img src="images/article_rainfall/rainfall_5_cloud.jpg" alt="description" height="180" />
 
                     <p>Sunshine, Dewpoint, Windspeed and Winddirection
                         <br>Let's build similar histograms for those 4 metrics that might have a less obvious
                         correlation with rainfall.
-                        <img src="images/article_rainfall/rainfall_6_sunshine.jpg" alt="description" height="120" />
+                        <img src="images/article_rainfall/rainfall_6_sunshine.jpg" alt="description" height="200" />
                     <ul>
                         <li>Sunshine: as expected a lower amount of sunshine hours is correlated with a higher chance of
                             rainfall. We will look below at the correlation between sunshine and cloud coverage.</li>
@@ -238,8 +239,10 @@
                         <br>
                         For winddirection, we could create also 8 categories (N, NE, E, etc.) but will simplify and
                         create 4: North (0) (0-45 and 315-360), East (1) (45-135), South (2) (135-225), West (3)
-                        (225-315)
+                        (225-315).
+                        <br>
                         <img src="images/article_rainfall/rainfall_7_windcat.jpg" alt="description" height="120" />
+                        <br>
                         Converting continuous measures to categorical discrete ones can help to reduce the noise and
                         draw better conclusions. Here we can see that:
                     <ul>
@@ -259,7 +262,9 @@
                         know where the data was sampled, that there would be months of the year that are more prone to
                         rainfall. Since there are 365 days in our dataset, we can assume day 1 is Jan 1st and can
                         re-classify the days in months.
-                        <img src="images/article_rainfall/rainfall_8_day.jpg" alt="description" height="120" />
+                        <br>
+                        <img src="images/article_rainfall/rainfall_8_day.jpg" alt="description" height="180" />
+                        <br
                         As we can see there are some month of the year where rainfall is much more likely (April,
                         November) and some where it is relatively less likely (January, July, September). We can
                         probably use this feature as a predictor instead of the day feature.
@@ -267,8 +272,8 @@
 
                     <p>Correlation matrix:
                         We plot a final correlation matrix to analyse the different metrics we have and summarize.
-                        <img src="images/article_rainfall/rainfall_9_correlation.jpg" alt="description" height="250" />
-                        Insights:
+                        <img src="images/article_rainfall/rainfall_9_correlation.jpg" alt="description" height="400" />
+                        <br>Insights:
                     <ul>
                         <li>As discussed before, some of the metrics are correlated with on another: maxtemp,
                             temperature, mintemp and dewpoint are all strongly correlated. To simplify the model we will
@@ -371,7 +376,7 @@
                     We fit the models and generate a table to compare the results using both the data with and without
                     outliers. This is the results table we get:
                     </p>
-                    <img src="images/article_rainfall/rainfall_10_results.jpg" alt="description" height="70" />
+                    <img src="images/article_rainfall/rainfall_10_results.jpg" alt="description" height="100" />
                     <p>Looking at the results above we can see that:
                     <ul>
                         <li>in both cases the validation scores are slightly lower than the testing ones. Only slightly
@@ -399,7 +404,7 @@
                         </div>
                         <div class="grid-item-2-1">
                             <img src="images/article_rainfall/rainfall_11_confusion.jpg" alt="description"
-                                height="200" />
+                                height="300" />
                         </div>
                     </div>
 
@@ -414,7 +419,7 @@
                         </div>
                         <div class="grid-item-2-1">
                             <img src="images/article_rainfall/rainfall_12_classification_report.jpg" alt="description"
-                                height="200" />
+                                height="170" />
                         </div>
                     </div>
 
@@ -431,7 +436,7 @@
                             </p>
                         </div>
                         <div class="grid-item-2-1">
-                            <img src="images/article_rainfall/rainfall_13_roc_auc.jpg" alt="description" height="200" />
+                            <img src="images/article_rainfall/rainfall_13_roc_auc.jpg" alt="description" height="300" />
                         </div>
                     </div>
 
@@ -454,7 +459,7 @@
                             </p>
                         </div>
                         <div class="grid-item-2-1">
-                            <img src="images/article_rainfall/rainfall_14_feature.jpg" alt="description" height="250" />
+                            <img src="images/article_rainfall/rainfall_14_feature.jpg" alt="description" height="300" />
                         </div>
                     </div>
 
